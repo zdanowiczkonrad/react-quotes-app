@@ -19,11 +19,13 @@ export const Quote = ({quote, onQuoteLiked, likedQuotes}) => {
   </div>;
 }
 
-export const NewQuoteForm = () => {
-  return <div className="new-quote"> 
-    <input type="text" placeholder="author"/>
-    <input type="text" placeholder="quote" />
-    <input type="text" placeholder="avatar image source..."/>
-    <button>Add!</button>
-  </div>;
+export class NewQuoteForm extends React.Component {
+  render() {
+    return <div className="new-quote"> 
+        <input type="text" placeholder="author"/>
+        <input type="text" placeholder="quote" />
+        <input type="text" placeholder="avatar image source..."/>
+        <button onClick={this.props.onQuoteCreate}>Add!</button>
+      </div>;
+      }
 }

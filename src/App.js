@@ -35,6 +35,7 @@ class App extends Component {
         </div>
     
        {this.state.quotes.map(quote => <Quote
+        key={quote.id}
         quote={quote}
         onQuoteLiked={this.onQuoteLiked}
         likedQuotes={this.state.likedQuotes}
