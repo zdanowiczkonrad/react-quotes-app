@@ -19,3 +19,11 @@ export const Quote = ({quote, onQuoteLiked, likedQuotes}) => {
   </div>;
 }
 
+export const NewQuoteForm = () => {
+  return <div className="new-quote"> 
+    <input type="text" placeholder="author"/>
+    <input type="text" placeholder="quote" />
+    <input type="text" placeholder="avatar image source..."/>
+    <button>Add!</button>
+  </div>;
+}

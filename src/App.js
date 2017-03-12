@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {quotes} from '../../../quotes.json';
-import { Quote } from './quote';
+import { Quote, NewQuoteForm } from './quote';
 
 class App extends Component {
 
@@ -31,6 +31,7 @@ class App extends Component {
         <h1>Quotes React App</h1>
         <div className="actions">
           <button onClick={this.clearLikes}>Clear likes</button>
+          <NewQuoteForm/>
         </div>
     
        {this.state.quotes.map(quote => <Quote
