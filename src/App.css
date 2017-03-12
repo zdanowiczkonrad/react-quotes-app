@@ -1,10 +1,7 @@
-body {
-  background: #eee;
-  font-family: "PragmataPro";
 
-}
 .App {
-  text-align: center;
+  text-align: left;
+  box-sizing: border-box;
   margin: 10%;
   background: white;
   padding: 20px;

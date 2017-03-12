@@ -1,0 +1,28 @@
+.quote {
+    display:  flex;
+    margin-bottom: 20px;
+    border-bottom: 1px #999 solid;
+}
+
+.quote:last-child {
+    border: none;
+}
+
+.avatar {
+    display:  block;
+    width:  200px;
+    height:  200px;
+    object-fit: contain;
+}
+
+.author {
+    display:  block;
+    font-weight:  900;
+    font-size:  40px;
+    margin-bottom: 20px;
+}
+
+.text {
+    display:  block;
+    font-size: 25px;
+}

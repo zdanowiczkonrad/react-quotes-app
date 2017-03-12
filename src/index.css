@@ -2,3 +2,11 @@ body {
   background: #eee;
   font-family: "PragmataPro";
 }
+
+h1 {
+  font-size: 30px;  
+  font-weight: 100;
+  letter-spacing: 140%;
+  color: #888;
+  margin-bottom: 50px;
+}
