@@ -5,7 +5,7 @@ import './quotes.css';
 export const Quote = ({quote, onQuoteLiked, likedQuotes}) => {
   const isLiked = likedQuotes.indexOf(quote) > -1;
   return  <div className="quote">
-      <img className="avatar" src={images[quote.author]}/>
+      <img className="avatar" src={quote.avatar || images[quote.author]}/>
       <div className="content">
         <span className="author">{quote.author}
           <button
