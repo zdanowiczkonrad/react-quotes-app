@@ -32,20 +32,28 @@
     font-size: 25px;
 }
 
-.like {
-    background: white;
+button {
     font-weight: bold;
     font-size: 17px;
-    opacity: 0.3;
     border: 0;
     transition: all 0.3s ease;
     height: 33px;
     outline: none;
     line-height: 1;
+    cursor: pointer;
+    background: #eee;
+    border-radius: 10px;
+    padding: 2px 6px;
+    margin-right: 12px;
+    display: inline-block;
+    color: #777;
 }
 
+.like {
+    opacity: 0.5;
+}
 .like:hover {
-    cursor: pointer;
+  
     opacity: 0.7;
 }
 
@@ -53,4 +61,8 @@
     color: black;
     background: white;
     opacity: 1;
+}
+
+.actions {
+    padding: 10px;
 }

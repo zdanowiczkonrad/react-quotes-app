@@ -21,15 +21,24 @@ class App extends Component {
     }
   };
 
+  clearLikes = () => {
+    this.setState({likedQuotes: []});
+  };
+
   render() {
     return (
       <div className="App">
         <h1>Quotes React App</h1>
+        <div className="actions">
+          <button onClick={this.clearLikes}>Clear likes</button>
+        </div>
+    
        {this.state.quotes.map(quote => <Quote
         quote={quote}
         onQuoteLiked={this.onQuoteLiked}
         likedQuotes={this.state.likedQuotes}
        />)}
+       
       </div>
     );
   }
