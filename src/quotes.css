@@ -1,7 +1,9 @@
 .quote {
     display:  flex;
     margin-bottom: 20px;
-    border-bottom: 1px #999 solid;
+    border-bottom: 2px #ddd solid;
+    padding-bottom: 20px;
+    align-items: center;
 }
 
 .quote:last-child {

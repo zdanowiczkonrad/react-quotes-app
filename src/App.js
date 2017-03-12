@@ -16,6 +16,7 @@ class App extends Component {
       <div className="App">
         <h1>Quotes React App</h1>
         {renderQuote(rickQuote)}
+        {renderQuote(rickQuote)}
       </div>
     );
   }
