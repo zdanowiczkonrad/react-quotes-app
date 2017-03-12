@@ -20,12 +20,24 @@ export const Quote = ({quote, onQuoteLiked, likedQuotes}) => {
 }
 
 export class NewQuoteForm extends React.Component {
+  authorInput;
+  quoteInput;
+  avatarInput;
+
+  onQuoteCreate = () => {
+    const newQuote = {
+      author: this.authorInput.value,
+      text:  this.quoteInput.value,
+      avatar:  this.avatarInput.value
+    }
+  }
+
   render() {
     return <div className="new-quote"> 
-        <input type="text" placeholder="author"/>
-        <input type="text" placeholder="quote" />
-        <input type="text" placeholder="avatar image source..."/>
-        <button onClick={this.props.onQuoteCreate}>Add!</button>
+        <input type="text" ref={el => this.authorInput = el} placeholder="author"/>
+        <input type="text" ref={el => this.quoteInput = el} placeholder="quote" />
+        <input type="text" ref={el => this.avatarInput = el} placeholder="avatar image source..."/>
+        <button onClick={this.onQuoteCreate}>Add!</button>
       </div>;
       }
 }
