@@ -39,6 +39,9 @@
     opacity: 0.3;
     border: 0;
     transition: all 0.3s ease;
+    height: 33px;
+    outline: none;
+    line-height: 1;
 }
 
 .like:hover {
