@@ -13,7 +13,7 @@ class App extends Component {
   onQuoteLiked = quote => {
     console.log('quoteLiked', quote);
     if (this.state.likedQuotes.indexOf(quote) < 0) {
-      const withQuote = this.state.likedQuotes.concat(quote);
+      const withQuote = [... this.state.likedQuotes, quote];
       this.setState({ likedQuotes: withQuote });
     } else {
       const withoutQuote = this.state.likedQuotes.filter(one => one !== quote);
@@ -25,13 +25,18 @@ class App extends Component {
     this.setState({likedQuotes: []});
   };
 
+  onQuoteAdded = newQuote => {
+    const withQuote = [ newQuote, ...this.state.quotes ];
+    this.setState({quotes: withQuote});
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Quotes React App</h1>
         <div className="actions">
           <button onClick={this.clearLikes}>Clear likes</button>
-          <NewQuoteForm/>
+          <NewQuoteForm onQuoteAdded={this.onQuoteAdded}/>
         </div>
     
        {this.state.quotes.map(quote => <Quote

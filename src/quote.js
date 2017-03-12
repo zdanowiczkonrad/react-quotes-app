@@ -30,13 +30,15 @@ export class NewQuoteForm extends React.Component {
       text:  this.quoteInput.value,
       avatar:  this.avatarInput.value
     }
+
+    this.props.onQuoteAdded(newQuote);
   }
 
   render() {
     return <div className="new-quote"> 
         <input type="text" ref={el => this.authorInput = el} placeholder="author"/>
         <input type="text" ref={el => this.quoteInput = el} placeholder="quote" />
-        <input type="text" ref={el => this.avatarInput = el} placeholder="avatar image source..."/>
+        <input type="text" ref={el => this.avatarInput = el} placeholder="avatar image url..."/>
         <button onClick={this.onQuoteCreate}>Add!</button>
       </div>;
       }

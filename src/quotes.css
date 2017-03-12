@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.content {
+    width: 100%;
+}
+
 .quote:last-child {
     border: none;
 }
