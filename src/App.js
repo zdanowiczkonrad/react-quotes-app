@@ -5,13 +5,18 @@ import { Quote } from './quote';
 
 class App extends Component {
 
-  render() {
- 
+  onQuoteLiked = (quote) => {
+    console.log('quoteLiked', quote);
+  };
 
+  render() {
     return (
       <div className="App">
         <h1>Quotes React App</h1>
-       {quotes.map(Quote)}
+       {quotes.map(quote => <Quote
+        quote={quote}
+        onQuoteLiked={this.onQuoteLiked}
+       />)}
       </div>
     );
   }
